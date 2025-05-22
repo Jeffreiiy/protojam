@@ -1,6 +1,5 @@
 import "./App.css";
-import Quiz from "./components/Quiz"
-import { questions } from "./components/question"
+import QuestionBox from "./components/QuestionBox.tsx";
 
 function App() {
   return (
@@ -8,41 +7,22 @@ function App() {
       <header>
           <h2 className="block-primary-main">PROTO<div className={"letterJ"}>J</div>AM</h2>
       </header>
-
-      <nav className="navbar">
-        <ul>
-          <li>
-
-          </li>
-        </ul>
-      </nav>
-
       <main className="text-box">
-
-
-        <hgroup className="block-primary">
-          
+        <section className="block-primary">
           <h2 className="block-primary-main">Protojam</h2>
-          
           <p className="block-primary-sub">Votre questionnaire HTML/CSS/Git</p>
-          
-        </hgroup>
-        <p>prêt ?</p>
-        <Quiz questions={questions} />
+        </section>
+        <QuestionBox />
       </main>
-
       <footer>
-        
         <a
           href="https://www.wildcodeschool.com/"
           className="wcs"
           target="_blank"
           rel="noopener noreferrer"
         >
-            
         </a>
       </footer>
-      
     </>
   );
 }
