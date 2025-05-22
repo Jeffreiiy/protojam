@@ -1,26 +1,22 @@
-body {   
-  
-   background: 
-    url('hans.gif'); 
-   
-   background-size: 800px auto; 
+body {
+   background: 10% / 50% 50%
+    url('hans.gif');
+   background-size: 50% 100%;
  } 
-
-
 
 /* Seulement les nouveaux styles nécessaires */
 .quiz-container {
   position: relative;
-  height: 100vh;
+  height: 500px;
+  width: 100%;
   overflow: hidden;
 }
 
 .question {
-  background: white;
+  width: fit-content;
   padding: 1rem 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  max-width: 60%;
   transform: translate(-50%, -50%);
 }
 
@@ -28,11 +24,11 @@ body {
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
   transform: translate(-50%, -50%);
-  font-size: 28px !important; /* Taille de base */
+  font-size: 28px ; /* Taille de base */
 }
 
-.correct { background: #d4edda !important; }
-.incorrect { background: #f8d7da !important; }
+.correct { background: #d4edda ; }
+.incorrect { background: #f8d7da ; }
 
 .score-display {
   position: fixed;
@@ -41,7 +37,7 @@ body {
 }
 
 .answer-label {
-  font-size: 1.4rem !important;
+  font-size: 1.4rem ;
   margin-right: 15px;
   font-weight: bolder;
 }

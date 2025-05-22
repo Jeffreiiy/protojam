@@ -223,9 +223,9 @@ function QuestionBox() {
       <h2>Question</h2>
       <p>{questions[questionCount].question}</p>
 
-      <ul>
+      <ul className={"ulQCM"}>
         <li>
-          <button
+          <button className={"QCM QCM1"}
             type="button"
             onClick={() => {
               if (questions[questionCount].answers[0].correct) {
@@ -237,7 +237,7 @@ function QuestionBox() {
           </button>
         </li>
         <li>
-          <button
+          <button className={"QCM QCM2"}
             type="button"
             onClick={() => {
               if (questions[questionCount].answers[1].correct) {
@@ -249,7 +249,7 @@ function QuestionBox() {
           </button>
         </li>
         <li>
-          <button
+          <button className={"QCM QCM3"}
             type="button"
             onClick={() => {
               if (questions[questionCount].answers[2].correct) {
@@ -257,11 +257,11 @@ function QuestionBox() {
               }
             }}
           >
-            {questions[questionCount].answers[2].text}
+            <p className={"QCMText3"}>{questions[questionCount].answers[2].text}</p>
           </button>
         </li>
         <li>
-          <button
+          <button className={"QCM QCM4"}
             type="button"
             onClick={() => {
               if (questions[questionCount].answers[3].correct) {
@@ -269,7 +269,7 @@ function QuestionBox() {
               }
             }}
           >
-            {questions[questionCount].answers[3].text}
+            <p className={"QCMText4"}>{questions[questionCount].answers[3].text}</p>
           </button>
         </li>
       </ul>
