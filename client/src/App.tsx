@@ -1,4 +1,6 @@
 import "./App.css";
+import Quiz from "./components/Quiz"
+import { questions } from "./components/question"
 
 function App() {
   return (
@@ -17,25 +19,30 @@ function App() {
 
       <main className="text-box">
 
-        <hgroup className="block-primary">
 
+        <hgroup className="block-primary">
+          
+          <h2 className="block-primary-main">Protojam</h2>
+          
           <p className="block-primary-sub">Votre questionnaire HTML/CSS/Git</p>
+          
         </hgroup>
         <p>prêt ?</p>
-          <button className={"btnStart"} type={"button"}>Commencer</button>
+        <Quiz questions={questions} />
       </main>
 
       <footer>
-        Développé par
+        
         <a
           href="https://www.wildcodeschool.com/"
           className="wcs"
           target="_blank"
           rel="noopener noreferrer"
         >
-            <p>une équipe de bras cassés</p>
+            
         </a>
       </footer>
+      
     </>
   );
 }
