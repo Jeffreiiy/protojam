@@ -1,0 +1,70 @@
+.block-primary-main {
+  font-size: 3em;
+  letter-spacing: 3px;
+  animation: blink 12s infinite;
+  width: 50vw;
+  text-align: center;
+}
+
+.t {
+  color: #11111100;
+  position: relative;
+  text-shadow: none;
+
+  &::before,
+  &::after {
+    content: "t";
+
+    position: absolute;
+    padding-bottom: 37px;
+    left: -4.5px;
+    top: -20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    rotate: 180deg;
+    animation: rotating 1.3s infinite linear, blink2 3s infinite;
+  }
+}
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ff1493ad, 0 0 15px #eee, 0 0 20px #ff1493ad, 0 0 40px
+      #a00ac9, 0 0 60px #ff0000, 0 0 10px #970dc5, 0 0 98px #ff0000;
+    color: #fff;
+  }
+}
+@keyframes blink2 {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+    text-shadow: 0 0 5px #ff1493ad, 0 0 15px #eee, 0 0 20px #ff1493ad, 0 0 40px
+      #a00ac9, 0 0 60px #ff0000, 0 0 10px #970dc5, 0 0 98px #ff0000;
+    color: #fff;
+  }
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    color: black;
+    text-shadow: none;
+  }
+}
