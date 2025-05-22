@@ -214,68 +214,92 @@ const questions = [
 ];
 
 function QuestionBox() {
-  const [goodAnswer, setGoodAnswer] = useState(0);
+  const [clickCount, setClickCount] = useState(0);
   const [questionCount, setQuestionCount] = useState(0);
-  const [answerIndex, setAnswerIndex] = useState(0);
 
   return questionCount < questions.length ? (
-    <section>
+    <section className="questionBox">
       <h2>Question</h2>
       <p>{questions[questionCount].question}</p>
 
-      <ul>
+      <ul className="questionList">
         <li>
           <button
+            className="question one block-primary-main-2"
             type="button"
             onClick={() => {
+              setClickCount(clickCount + 1);
               if (questions[questionCount].answers[0].correct) {
                 setQuestionCount(questionCount + 1);
               }
             }}
           >
-            {questions[questionCount].answers[0].text}
+            <p className="textOne">
+              {questions[questionCount].answers[0].text}
+            </p>
           </button>
         </li>
         <li>
           <button
+            className="question two block-primary-main-2"
             type="button"
             onClick={() => {
+              setClickCount(clickCount + 1);
+
               if (questions[questionCount].answers[1].correct) {
                 setQuestionCount(questionCount + 1);
               }
             }}
           >
-            {questions[questionCount].answers[1].text}
+            <p className="textTwo">
+              {questions[questionCount].answers[1].text}
+            </p>
           </button>
         </li>
         <li>
           <button
+            className="question three block-primary-main-2"
             type="button"
             onClick={() => {
+              setClickCount(clickCount + 1);
+
               if (questions[questionCount].answers[2].correct) {
                 setQuestionCount(questionCount + 1);
               }
             }}
           >
-            {questions[questionCount].answers[2].text}
+            <p className="textThree">
+              {" "}
+              {questions[questionCount].answers[2].text}
+            </p>
           </button>
         </li>
         <li>
           <button
+            className="question four block-primary-main-2"
             type="button"
             onClick={() => {
+              setClickCount(clickCount + 1);
+
               if (questions[questionCount].answers[3].correct) {
                 setQuestionCount(questionCount + 1);
               }
             }}
           >
-            {questions[questionCount].answers[3].text}
+            <p className="textFour">
+              {" "}
+              {questions[questionCount].answers[3].text}
+            </p>
           </button>
         </li>
       </ul>
     </section>
   ) : (
-    <h2> finito {questionCount} </h2>
+    <h3>
+      {" "}
+      Bravo, ça ne t'a pris que {clickCount} clicks pour repondre aux{" "}
+      {questionCount} questions !
+    </h3>
   );
 }
 

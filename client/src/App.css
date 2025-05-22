@@ -62,7 +62,6 @@ header {
   grid-row: 1;
   align-self: center;
   text-align: center;
-  width: 100vw;
 }
 
 .block-primary {
@@ -70,42 +69,17 @@ header {
   margin-bottom: 2rem;
 }
 
-header{
+header {
   display: flex;
   justify-content: center;
-  width: 100vw;
 }
-.block-primary-main {
-  font-size: 3em;
-  letter-spacing: 5px;
-  animation: blink 12s infinite ;
-  width: 50vw;
-  text-align: center;
-  height: 16vw;
 
-}
-.letterJ{
+.letterJ {
+  z-index: 3;
   display: flex;
   position: absolute;
-  animation:4s infinite ease-in-out;
-  animation-name:slidein;
-}
-@keyframes slidein {
-  0% {
-    top: 11vw;
-    left: 0;
-    rotate: 180deg;
-  }
-  50%{
-    top: 1vw;
-    left: 53vw;
-    rotate: 0deg;
-  }
-  100% {
-    top:11vw;
-    left: 100vw;
-    rotate:180deg;
-  }
+  animation: 4s infinite ease-in-out;
+  animation-name: slidein;
 }
 
 .block-primary-sub {
@@ -139,10 +113,10 @@ header{
   background-color: #fff;
   color: #777;
 }
-.btnStart{
+.btnStart {
   margin: 1rem;
   padding: .5rem 1rem;
-  background:#03d8ec ;
+  background: #03d8ec;
   color: #ff1493ad;
   outline: none;
   border: .25px solid white;
@@ -150,9 +124,9 @@ header{
   font-size: 1rem;
   font-weight: 200;
   transition: .30s;
-  rotate:5deg;
+  rotate: 5deg;
   &:hover {
-    background: #000 ;
+    background: #000;
     font-weight: 400;
     font-size: 2rem;
   }
@@ -173,23 +147,20 @@ footer {
   text-decoration: underline;
 }
 
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
+@keyframes rotating {
+  0% {
+    transform: rotate(0);
   }
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
   100% {
-    text-shadow: 0 0 5px #ff1493ad, 0 0 15px #eee, 0 0 20px #ff1493ad, 0 0 40px
-      #a00ac9, 0 0 60px #ff0000, 0 0 10px #970dc5, 0 0 98px #ff0000;
-    color: #fff;
+    transform: rotate(0);
   }
 }

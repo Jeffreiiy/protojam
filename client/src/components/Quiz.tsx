@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import './Quiz.css'; // Utilise le CSS existant de ton App.css
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import "./Quiz.css"; // Utilise le CSS existant de ton App.css
 
 interface Answer {
   label: string;
@@ -52,30 +52,30 @@ export default function Quiz({ questions }: QuizProps) {
     nextQuestion();
   }, []);
 
-  if (!currentQuestion || !positions) return <div className="loading">Chargement...</div>;
+  if (!currentQuestion || !positions)
+    return <div className="loading">Chargement...</div>;
 
   return (
-    <div className="quiz-container"> {/* Supprime le fond ici */}
+    <div className="quiz-container">
+      {" "}
+      {/* Supprime le fond ici */}
       {/* Header conservé */}
       <header>
         <h1 className="logo">Protojam</h1>
       </header>
-
       {/* Question animée */}
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="question block-primary-main" // Utilise tes classes existantes
         style={{
-          position: 'absolute',
           top: `${positions.q.top}%`,
           left: `${positions.q.left}%`,
         }}
       >
         {currentQuestion.question}
       </motion.div>
-
       {/* Réponses animées */}
       {currentQuestion.answers.map((answer, index) => (
         <motion.button
@@ -83,9 +83,9 @@ export default function Quiz({ questions }: QuizProps) {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: index * 0.1, duration: 0.3 }}
-          className={`answer-btn ${selectedAnswer === index ? (answer.correct ? 'correct' : 'incorrect') : ''}`}
+          className={`answer-btn ${selectedAnswer === index ? (answer.correct ? "correct" : "incorrect") : ""}`}
           style={{
-            position: 'absolute',
+            position: "absolute",
             top: `${positions.a[index].top}%`,
             left: `${positions.a[index].left}%`,
           }}
@@ -96,17 +96,18 @@ export default function Quiz({ questions }: QuizProps) {
           }}
           disabled={selectedAnswer !== null}
         >
-          <span className="answer-label">{answer.label}</span>
           {answer.text}
         </motion.button>
       ))}
-
       {/* Score et footer conservés */}
       <div className="score-display">Score: {score}</div>
-      
       <footer>
         Développé par
-        <a href="https://www.wildcodeschool.com/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.wildcodeschool.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <p>une équipe de bras cassés</p>
         </a>
       </footer>

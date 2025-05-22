@@ -1,48 +1,22 @@
 import "./App.css";
-import Quiz from "./components/Quiz"
-import { questions } from "./components/question"
+import QuestionBox from "./components/QuestionBox";
+import "./components/QuestionBox.css";
+import Titles from "./components/Titles";
+import "./components/Titles.css";
 
 function App() {
   return (
     <>
       <header>
-          <h2 className="block-primary-main">PROTO<div className={"letterJ"}>J</div>AM</h2>
+        <Titles />
       </header>
-
-      <nav className="navbar">
-        <ul>
-          <li>
-
-          </li>
-        </ul>
-      </nav>
-
       <main className="text-box">
-
-
         <hgroup className="block-primary">
-          
-          <h2 className="block-primary-main">Protojam</h2>
-          
           <p className="block-primary-sub">Votre questionnaire HTML/CSS/Git</p>
-          
         </hgroup>
-        <p>prêt ?</p>
-        <Quiz questions={questions} />
-      </main>
 
-      <footer>
-        
-        <a
-          href="https://www.wildcodeschool.com/"
-          className="wcs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-            
-        </a>
-      </footer>
-      
+        <QuestionBox />
+      </main>
     </>
   );
 }
