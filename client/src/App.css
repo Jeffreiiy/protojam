@@ -92,109 +92,19 @@ header{
 }
 @keyframes slidein {
   0% {
-    top:11vw;
+    top: 11vw;
     left: 0;
-    rotate:0deg;
+    rotate: 180deg;
   }
-  5% {
-    top:11vw;
-    left: 5vw;
-    rotate:18deg;
-  }
-  10% {
-    top:11vw;
-    left: 10vw;
-    rotate:36deg;
-  }
-  15% {
-    top:11vw;
-    left: 15vw;
-    rotate:54deg;
-  }
-  20% {
-    top:11vw;
-    left: 20vw;
-    rotate:72deg;
-  }
-  25% {
-    top:11vw;
-    left: 25vw;
-    rotate:90deg;
-  }
-  30% {
-    top:11vw;
-    left: 30vw;
-    rotate:108deg;
-  }
-  35% {
-    top:11vw;
-    left: 35vw;
-    rotate:126deg;
-  }
-  40% {
-    top:11vw;
-    left: 40vw;
-    rotate:144deg;
-  }
-  45% {
-    top:11vw;
-    left: 45vw;
-    rotate:162deg;
-  }
-  50% {
-    top:11vw;
-    left: 50vw;
-    rotate:180deg;
-  }
-  55% {
-    top:11vw;
-    left: 55vw;
-    rotate:198deg;
-  }
-  60% {
-    top:11vw;
-    left: 60vw;
-    rotate:216deg;
-  }
-  65% {
-    top:11vw;
-    left: 65vw;
-    rotate:234deg;
-  }
-  70% {
-    top:11vw;
-    left: 70vw;
-    rotate:252deg;
-  }
-  75% {
-    top:11vw;
-    left: 75vw;
-    rotate:270deg;
-  }
-  80% {
-    top:11vw;
-    left: 80vw;
-    rotate:288deg;
-  }
-  85% {
-    top:11vw;
-    left: 85vw;
-    rotate:306deg;
-  }
-  90% {
-    top:11vw;
-    left: 90vw;
-    rotate:324deg;
-  }
-  95% {
-    top:11vw;
-    left: 95vw;
-    rotate:342deg;
+  50%{
+    top: 1vw;
+    left: 53vw;
+    rotate: 0deg;
   }
   100% {
     top:11vw;
     left: 100vw;
-    rotate:360deg;
+    rotate:180deg;
   }
 }
 
