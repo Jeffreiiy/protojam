@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Congrats from "./Congrats";
 
 const questions = [
   {
@@ -219,13 +220,15 @@ function QuestionBox() {
 
   return questionCount < questions.length ? (
     <section className="questionBox">
-      <h2>Question</h2>
+      <h2>
+        Question {questionCount + 1} / {questions.length}
+      </h2>
       <p>{questions[questionCount].question}</p>
 
-      <ul className="questionList">
+      <ul className={"ulQCM"}>
         <li>
           <button
-            className="question one block-primary-main-2"
+            className={"QCM QCM1"}
             type="button"
             onClick={() => {
               setClickCount(clickCount + 1);
@@ -241,7 +244,7 @@ function QuestionBox() {
         </li>
         <li>
           <button
-            className="question two block-primary-main-2"
+            className={"QCM QCM2"}
             type="button"
             onClick={() => {
               setClickCount(clickCount + 1);
@@ -258,7 +261,7 @@ function QuestionBox() {
         </li>
         <li>
           <button
-            className="question three block-primary-main-2"
+            className={"QCM QCM3"}
             type="button"
             onClick={() => {
               setClickCount(clickCount + 1);
@@ -268,15 +271,14 @@ function QuestionBox() {
               }
             }}
           >
-            <p className="textThree">
-              {" "}
+            <p className={"QCMText3"}>
               {questions[questionCount].answers[2].text}
             </p>
           </button>
         </li>
         <li>
           <button
-            className="question four block-primary-main-2"
+            className={"QCM QCM4"}
             type="button"
             onClick={() => {
               setClickCount(clickCount + 1);
@@ -286,8 +288,7 @@ function QuestionBox() {
               }
             }}
           >
-            <p className="textFour">
-              {" "}
+            <p className={"QCMText4"}>
               {questions[questionCount].answers[3].text}
             </p>
           </button>
@@ -295,11 +296,7 @@ function QuestionBox() {
       </ul>
     </section>
   ) : (
-    <h3>
-      {" "}
-      Bravo, ça ne t'a pris que {clickCount} clicks pour repondre aux{" "}
-      {questionCount} questions !
-    </h3>
+    <Congrats questionCount={questionCount} clickCount={clickCount} />
   );
 }
 

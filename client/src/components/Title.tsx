@@ -1,8 +1,8 @@
-function Titles() {
+function Title() {
   return (
     <h2 className="block-primary-main">
       Pro<span className="t">t</span>ojam
     </h2>
   );
 }
-export default Titles;
+export default Title;

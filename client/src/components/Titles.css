@@ -6,6 +6,22 @@
   text-align: center;
 }
 
+.block-primary-main2 {
+  animation: blink 8s infinite;
+  text-align: center;
+}
+
+.block-primary-main3 {
+  text-shadow: 0 0 5px #ff1493ad, 0 0 15px #eee, 0 0 20px #ff1493ad, 0 0 40px
+    #a00ac9, 0 0 60px #ff0000, 0 0 10px #970dc5, 0 0 98px #ff0000;
+  color: #fff;
+  font-size: 3em;
+  letter-spacing: 3px;
+  animation: fall 1.2s infinite linear;
+  width: 50vw;
+  text-align: center;
+}
+
 .t {
   color: #11111100;
   position: relative;
@@ -24,6 +40,27 @@
     color: white;
     rotate: 180deg;
     animation: rotating 1.3s infinite linear, blink2 3s infinite;
+  }
+}
+
+.s {
+  color: #11111100;
+  position: relative;
+  text-shadow: none;
+
+  &::before,
+  &::after {
+    content: "s";
+
+    position: absolute;
+    padding-bottom: 37px;
+    left: -4.5px;
+    top: -20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    rotate: 180deg;
+    animation: rotating 2s infinite linear, blink2 6s infinite;
   }
 }
 @keyframes blink {
@@ -66,5 +103,36 @@
   100% {
     color: black;
     text-shadow: none;
+  }
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-3rem);
+  }
+  25% {
+    transform: translateY(9rem);
+  }
+  50% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: translateY(55rem);
+  }
+}
+@keyframes rotating {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }

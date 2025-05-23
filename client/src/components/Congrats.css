@@ -1,0 +1,7 @@
+.count1 {
+  animation: blink 1s infinite;
+}
+
+.count2 {
+  animation: blink 4s infinite;
+}
